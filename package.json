@@ -1,6 +1,6 @@
 {
-	"name": "get-chrome-tabs",
-	"version": "1.0.0",
+	"name": "@superpowered/get-chrome-tabs",
+	"version": "1.0.2",
 	"description": "Get information of the currently opened Chrome tabs, for example URLs and titles",
 	"author": "Shinnosuke Watanabe (https://github.com/shinnn)",
 	"repository": "shinnn/get-chrome-tabs",
@@ -41,6 +41,20 @@
 		"tape": "^4.10.1"
 	},
 	"eslintConfig": {
-		"extends": "@shinnn"
+		"extends": [
+			"react-app",
+			"react-app/jest",
+			"plugin:chai-friendly/recommended"
+		],
+		"overrides": [
+			{
+				"files": [
+					"**/*.stories.*"
+				],
+				"rules": {
+					"import/no-anonymous-default-export": "off"
+				}
+			}
+		]
 	}
 }
